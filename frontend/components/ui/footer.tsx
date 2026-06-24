@@ -55,7 +55,7 @@ export const Footer = () => {
         {titles.map((content, index) => {
           return (
             <div key={index} className="flex flex-col gap-2 ml-3">
-              <h1 className="font-semibold text-2xl text-lime-300 ">
+              <h1 className="font-semibold text-2xl text-lime-400 ">
                 {content.titleName}
               </h1>
               <ul>
