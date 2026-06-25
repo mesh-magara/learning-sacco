@@ -1,16 +1,24 @@
 import { Button } from "@/components/ui/button";
+
+//defining the data type for the nav links
+type NavLink = {
+  title: string;
+  href: string;
+  img?: string;
+};
 export default function Nav() {
-  const links = [
+  const links: NavLink[] = [
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
     { title: "Pricing", href: "/pricing" },
     { title: "Contact", href: "/contact" },
+    { title: "FAQS", href: "/FAQs" },
   ];
   return (
     <nav className="flex flex-wrap justify-between w-screen items-center bg-green-900 p-6 fixed top-0">
       <div className="text-3xl font-mono font-bold text-white">Mysacco</div>
       <ul className="flex flex-wrap justify-around items-center gap-6 text-blue-100 font-bold ">
-        {links.map((link) => (
+        {links?.map((link) => (
           <li
             key={link.href}
             className="hover:[border-b-2 border-amber-400 p-1rem]"

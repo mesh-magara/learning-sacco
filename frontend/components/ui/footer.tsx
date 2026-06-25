@@ -1,5 +1,10 @@
-export const Footer = () => {
-  const titles = [
+type titles = {
+  titleName: string;
+  data: object;
+};
+
+const Footer = () => {
+  const titles: titles[] = [
     {
       titleName: "CONTACT US",
       data: {
@@ -49,17 +54,17 @@ export const Footer = () => {
   const copyrightYear = new Date().getFullYear();
 
   return (
-    <div id="footer" className="bg-green-950 text-1xl bottom-0 w-screen ">
+    <div id="footer" className="bg-green-950 text-1xl  w-full ">
       {/* footer content */}
       <div className="flex justify-center gap-3 items-start mt-3 mb-3.5  p-3.5">
-        {titles.map((content, index) => {
+        {titles?.map((content, index) => {
           return (
             <div key={index} className="flex flex-col gap-2 ml-3">
               <h1 className="font-semibold text-2xl text-lime-400 ">
                 {content.titleName}
               </h1>
               <ul>
-                {(Object.values(content.data) as string[]).map((item, idx) => (
+                {(Object.values(content.data) as string[])?.map((item, idx) => (
                   <li key={idx} className="text-sm mb-1.5 p-0.5 text-gray-500">
                     {item}
                   </li>
@@ -71,9 +76,11 @@ export const Footer = () => {
       </div>
       {/* copyright div */}
       <p className="text-center bg-black text-white text-2xl p-2.5">
-        © Copyright {copyrightYear}| Comrade sacco Consultants | All Rights
+        © Copyright {copyrightYear} | Comrade sacco Consultants | All Rights
         Reserved.
       </p>
     </div>
   );
 };
+
+export default Footer;
