@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 //defining the data type for the nav links
 type NavLink = {
@@ -12,7 +13,7 @@ export default function Nav() {
     { title: "About", href: "/about" },
     { title: "Pricing", href: "/pricing" },
     { title: "Contact", href: "/contact" },
-    { title: "FAQS", href: "/FAQs" },
+    { title: "FAQS", href: "/faqs" },
   ];
   return (
     <nav className="flex flex-wrap justify-between w-screen items-center bg-green-900 p-6 fixed top-0">
@@ -28,12 +29,16 @@ export default function Nav() {
         ))}
       </ul>
       <div className="flex justify-around align-middle gap-2">
-        <Button variant="outline" size="lg">
-          Sign up
-        </Button>
-        <Button variant="secondary" size="lg">
-          log in
-        </Button>
+        <Link href="/register">
+          <Button variant="outline" size="lg">
+            Sign up
+          </Button>
+        </Link>
+        <Link href="/login">
+          <Button variant="secondary" size="lg">
+            log in
+          </Button>
+        </Link>
       </div>
     </nav>
   );

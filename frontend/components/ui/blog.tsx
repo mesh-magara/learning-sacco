@@ -28,6 +28,8 @@ const Blog = () => {
           <Image
             className="object-cover"
             src="/savings.jpg"
+            w-full="true"
+            h-full="true"
             fill={true}
             alt="image of money growing"
           />
