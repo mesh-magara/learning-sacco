@@ -40,7 +40,7 @@ export default function About() {
     },
   ];
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center gap-4 mt-20 bg-[linear-gradient(135deg,_#233200_0%,_#00d692_100%)]">
+    <div className="flex flex-col min-h-screen items-center justify-center gap-4 mt-20 bg-[linear-gradient(135deg,#233200_0%,#00d692_100%)]">
       <p className="text-2xl font-bold text-white p-3.5">About Us</p>
       <p className="text-lg text-gray-400 p-3.5">
         Our sacco is dedicated to providing excellent financial services to our
@@ -95,9 +95,9 @@ export default function About() {
           {TeamMembers.map((member, index) => (
             <div
               key={index}
-              className="flex rounded-lg hover:bg-[linear-gradient(135deg,_#233200_0%,_#00d692_100%)] bg-green-800 flex-col  ml-10 items-center justify-center p-3.5"
+              className="flex rounded-lg hover:bg-[linear-gradient(135deg,#233200_0%,#00d692_100%)] bg-green-800 flex-col  ml-10 items-center justify-center p-3.5"
             >
-              <div className="border-2 border-gray-300 rounded-[50%] relative w-[150px] h-[150px] overflow-hidden">
+              <div className="border-2 border-gray-300 rounded-[50%] relative w-37.5 h-37.5 overflow-hidden">
                 <Image src={member.image} alt={member.names} fill />
               </div>
 
