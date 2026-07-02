@@ -24,7 +24,12 @@ export default function Nav() {
             key={link.href}
             className="hover:[border-b-2 border-amber-400 p-1rem]"
           >
-            <a href={link.href}>{link.title}</a>
+            <a
+              className=" hover:bg-pink-700 p-3.5 hover:text-yellow-200  hover:scale-110 hover:shadow-lg hover:rounded-xl hover:-translate-y-1"
+              href={link.href}
+            >
+              {link.title}
+            </a>
           </li>
         ))}
       </ul>

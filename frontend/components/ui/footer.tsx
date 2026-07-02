@@ -60,12 +60,15 @@ const Footer = () => {
         {titles?.map((content, index) => {
           return (
             <div key={index} className="flex flex-col gap-2 ml-3">
-              <h1 className="font-semibold text-2xl text-lime-400 ">
+              <h1 className="font-semibold text-2xl text-lime-400 hover:text-yellow-600">
                 {content.titleName}
               </h1>
               <ul>
                 {(Object.values(content.data) as string[])?.map((item, idx) => (
-                  <li key={idx} className="text-sm mb-1.5 p-0.5 text-gray-500">
+                  <li
+                    key={idx}
+                    className="text-sm mb-1.5 p-0.5 text-gray-500 hover:text-yellow-300"
+                  >
                     {item}
                   </li>
                 ))}

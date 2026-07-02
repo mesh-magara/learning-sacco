@@ -1,5 +1,10 @@
 import type { ReactNode } from "react";
-import { RocketIcon, EyeIcon, ShieldAlertIcon } from "lucide-react";
+import {
+  RocketIcon,
+  EyeIcon,
+  ShieldAlertIcon,
+  MoveUpRight,
+} from "lucide-react";
 
 type missionVision = {
   title: string;
@@ -25,6 +30,12 @@ const misvis: missionVision[] = [
     description:
       " Teamwork , Equity , Professionalism, Integrity Creativity & Innovation",
     image: <ShieldAlertIcon />,
+  },
+  {
+    title: "Our direction",
+    description:
+      "To be the leading provider of financial services to students in Kenya.",
+    image: <MoveUpRight />,
   },
 ];
 

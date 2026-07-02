@@ -20,7 +20,10 @@ const Blog = () => {
             open boundaries to other members who aren’t from the Uruku locality.
           </p>
           <Button className="w-fit pt-3 pr-4 pb-3 pl-4">
-            Read More <ArrowRightIcon />{" "}
+            <a className="p-2" href="/about">
+              Read More
+            </a>{" "}
+            <ArrowRightIcon />{" "}
           </Button>
         </div>
         {/* image div */}
